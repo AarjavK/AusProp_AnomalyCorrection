@@ -1,19 +1,15 @@
-setwd("D:/Documents/大学/LatrobeMasterDataScience/THESIS/code")
+setwd("Path/to/your/folder")
 
 ################################################################################
 # Load libraries and data
 ################################################################################
-Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-24")
-library(microbenchmark)
 library(dplyr)
 library(h2o)
-library(tictoc)
 library(ggplot2)
+# Required if H2O is not detecting path to JDK
+Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-24") 
 
-
-fpath <- "./Domain_Housing_Data_250511 - Copy.csv"
-
-df <- read.csv(fpath)
+df <- read.csv("file.csv")
 ################################################################################
 # Transform the data
 ################################################################################
