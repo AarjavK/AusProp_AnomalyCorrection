@@ -19,7 +19,7 @@ The data that was collected from webscraping and the Australian Bureau of Statis
   </tr>
   <tr>
     <td>2</td>
-    <td>Address</td>
+    <td>Address (excluded for anonimity) </td>
     <td>Street address of property sold</td>
   </tr>
   </tr>
@@ -83,3 +83,16 @@ The data that was collected from webscraping and the Australian Bureau of Statis
     <td>Sale price</td>
   </tr>
 </table>
+
+# Project Structure
+The project is split into multiple sections:
+
+Data Collection and Exploratory Data Analysis (EDA)
+
+Feature Selection
+
+Anomaly Detection
+
+Model Fitting and comparisons
+
+Scaling Directions
