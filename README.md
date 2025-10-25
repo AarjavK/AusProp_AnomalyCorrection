@@ -86,13 +86,24 @@ The data that was collected from webscraping and the Australian Bureau of Statis
 
 # Project Structure
 The project is split into multiple sections:
+<ol>
+  <li>Data Collection and Exploratory Data Analysis (EDA)</li>
+  <li>Feature Selection</li>
+  <li>Model fitting and comparison</li>
+  <li>Scaling Directions</li>
+</ol>
 
-Data Collection and Exploratory Data Analysis (EDA)
 
-Feature Selection
+## Data Collection and Exploratory Data Analysis (EDA)
+The purpose of this section is to collect data from the Domain website and then build an understanding of the data. The code for this section can be found in <a href="https://github.com/AarjavK/AusProp_AnomalyCorrection/tree/main/Data_Collection">Data_Collection</a>. The <a href="https://github.com/AarjavK/AusProp_AnomalyCorrection/blob/main/Data_Collection/Webscraping.py">Webscraping.py</a> code uses Playwright to access the Domain website and download individual web pages. Domain.com.au has a limit of 50 pages of sales history for each search - this amount to approximately 8,000 property sales at a time. The webscraping code was at regular intervals to create large dataset of unique properties.
 
-Anomaly Detection
+Distance to the closest CBD / capital city uses the geopy Python package to get the latitude and longitude of each address then calculate the distance to the centre of each capital city. Given that Western Australia is very large geographically, both Perth (capital) and Broome were chosen to be the major cities. The final distance is the minimum distance from the property to Perth or Broome.
 
-Model Fitting and comparisons
+Median house prices were obtained from the <a href="https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/total-value-dwellings/latest-release">Australian Bureau of Statistics</a> and then assigned to each property through Excel. Given that the ABS only provides data for established houses and attached dwellings (any dwelling which shares a common structural component such as wall, ceiling or floor with at least one other dwelling), the median prices assigned using Excel formulas such that villas, houses, vacant land, and duplexes are considered established houses and all other property types are considered to be attached dwellings.
+## Feature Selection
 
-Scaling Directions
+## Anomaly Detection
+
+## Model Fitting and comparisons
+
+## Scaling Directions
