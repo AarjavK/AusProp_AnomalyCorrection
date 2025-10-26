@@ -1,5 +1,5 @@
 # AusProp_AnomalyCorrection
-For masters thesis: Anomaly correction for Australian property market
+For masters thesis: Feature Selection and Scaling Directions for Robust Property Price Prediction
 
 # Introduction
 
